@@ -1,0 +1,11 @@
+Package: MCDM
+Type: Package
+Title: MCDM
+Version: 0.1.0
+Author: Mohammadhadi Shahhosseini
+Maintainer: Mohammadhadi Shahhosseini <m.h.shahhosseini78@gmail.com>
+Description: The package contains methods of MCDM including normalizing data and calculating the weight of each criterion and methods of ranking such as VIKOR, WASPAS, etc.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
