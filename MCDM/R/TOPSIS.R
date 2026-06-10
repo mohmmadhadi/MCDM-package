@@ -13,7 +13,6 @@
 #'  cb <- c('max','max')
 #'  TOPSISLinear(d,w,cb)
 
-#' @export
 TOPSISLinear <- function(decision, #matrix with all the alternatives
                          weights,  #vector with the numeric values of the weights
                          cb        #vector with the "type" of the criteria (benefit = "max", cost = "min")
