@@ -27,7 +27,6 @@ The \code{MMOORA} function implements both the Multi-Objetive Optimization by Ra
  w <- c(0.036,0.192,0.326,0.326,0.12)
  cb <- c('max','min','max','max','max')
  MMOORA(d,w,cb)
-
 }
 \references{
 Brauers, W. K. M.; Zavadskas, E. K. Project management by MULTIMOORA as an instrument for transition economies. Technological and Economic Development of Economy, 16(1), 5-24, 2010.
