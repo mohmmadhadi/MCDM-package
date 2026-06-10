@@ -15,10 +15,10 @@
 #' weights <- c(0.4, 0.6)
 #' direction <- c("min", "max")
 #' v <- 0.5
-#' vikor_ranking(decision_matrix, weights, direction, v)
+#' VIKOR(decision_matrix, weights, direction, v)
 #'
 #' @export
-vikor <- function(matrix, weights, q, v) {
+VIKOR <- function(matrix, weights, q, v) {
   # Calculate the worst and best values for each criterion
   worst <- apply(matrix, 2, function(x) ifelse(q == "min", min(x), max(x)))
   best <- apply(matrix, 2, function(x) ifelse(q == "min", max(x), min(x)))

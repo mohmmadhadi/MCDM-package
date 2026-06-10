@@ -1,11 +1,10 @@
 Package: MCDM
 Type: Package
-Title: MCDM
-Version: 0.1.0
+Title: Multi-Criteria Decision Making Methods
+Version: 1.2.1
 Author: Mohammadhadi Shahhosseini
 Maintainer: Mohammadhadi Shahhosseini <m.h.shahhosseini78@gmail.com>
-Description: The package contains methods of MCDM including normalizing data and calculating the weight of each criterion and methods of ranking such as VIKOR, WASPAS, etc.
-License: None
+Description: Implements various Multi-Criteria Decision Making (MCDM) methods, including normalizing data, calculating the weight of each criterion, and methods of ranking such as VIKOR, WASPAS, and TOPSIS.
+License: GPL-3
 Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.2.3
+Config/roxygen2/version: 8.0.0
