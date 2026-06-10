@@ -2,33 +2,30 @@
 % Please edit documentation in R/VIKOR.R
 \name{VIKOR}
 \alias{VIKOR}
-\title{Implementation of VIKOR Method for Multi-Criteria Decision Making Problems.}
+\title{Calculate VIKOR rankings}
 \usage{
-VIKOR(decision, weights, cb, v)
+VIKOR(matrix, weights, q, v)
 }
 \arguments{
-\item{decision}{The decision matrix (\emph{m} x \emph{n}) with the values of the \emph{m} alternatives, for the \emph{n} criteria.}
+\item{matrix}{Decision matrix where rows represent alternatives and columns represent criteria.}
 
-\item{weights}{A vector of length \emph{n}, containing the weights for the criteria. The sum of the weights has to be 1.}
+\item{weights}{Criteria weights.}
 
-\item{cb}{A vector of length \emph{n}. Each component is either \code{cb(i)='max'} if the \emph{i-th} criterion is benefit or \code{cb(i)='min'} if the \emph{i-th} criterion is a cost.}
+\item{q}{Criteria direction ("min" for minimization, "max" for maximization).}
 
-\item{v}{A value in [0,1]. It is used in the calculation of the Q index.}
+\item{v}{Parameter (0 <= v <= 1).}
 }
 \value{
-\code{VIKOR} returns a data frame which contains the score of the S, R and Q indixes and the ranking of the alternatives according to Q index.
+A vector of rankings.
 }
 \description{
-The \code{VIKOR} function implements the "VIseKriterijumska Optimizacija I Kompromisno Resenje" (VIKOR) Method.
+This function implements the VIKOR algorithm to rank alternatives based on multiple criteria.
 }
 \examples{
+decision_matrix <- matrix(c(3, 5, 7, 4, 6, 8, 2, 7, 9, 6, 5, 8), nrow = 4, byrow = TRUE)
+weights <- c(0.4, 0.6)
+direction <- c("min", "max")
+v <- 0.5
+VIKOR(decision_matrix, weights, direction, v)
 
- d <- matrix(c(1,2,5,3000,3750,4500),nrow = 3,ncol = 2)
- w <- c(0.5,0.5)
- cb <- c('min','max')
- v <- 0.5
- VIKOR(d,w,cb,v)
-}
-\references{
-Opricovic, S.; Tzeng, G.H. Compromise solution by MCDM methods: A comparative analysis of VIKOR and TOPSIS. European Journal of Operational Research, 156(2), 445-455, 2004.
 }
